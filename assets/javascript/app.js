@@ -1,8 +1,8 @@
 $(document).ready(function() {
   // The base url for all API calls
   var apiBaseURL = 'https://api.themoviedb.org/3/';
-  var apiKey = "28e7691b28199415eec6fd8d3e1ffd18"
-
+  var apiKey = "d6e856f9ebe196c9adbd300aa4adac59"
+  var googleAPI = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA15CPGRxKc3zxnHEF-LcfukEWi-RApHw4&callback=initMap "
   // URL in Authentication. Base URL of image
   var imageBaseUrl = 'https://image.tmdb.org/t/p/';
 
@@ -31,7 +31,9 @@ $(document).ready(function() {
           var releaseDate = nowPlayingData.results[i].release_date;
 
           var overview = nowPlayingData.results[i].overview;
-
+          
+          var locationSearch = "https://www.google.com/maps/search/theatre+near+current+location/data=!3m1!4b1"    ;
+            
           var voteAverage = nowPlayingData.results[i].vote_average;
 
           var youtubeKey = movieKey.results[0].key;
@@ -48,13 +50,15 @@ $(document).ready(function() {
           nowPlayingHTML += '<div class="col-sm-6 moviePosterInModal">';
           nowPlayingHTML += '<a href="' + youtubeLink + '"><img src="' + poster + '"></a>';
           nowPlayingHTML += '</div><br>'; //close trailerLink
+         
           nowPlayingHTML += '<div class="col-sm-6 movieDetails">';
           nowPlayingHTML += '<div class="movieName">' + title + '</div><br>';
           nowPlayingHTML += '<div class="linkToTrailer"><a href="' + youtubeLink + '"><span class="glyphicon glyphicon-play"></span>&nbspPlay trailer</a>' + '</div><br>';
+          nowPlayingHTML += '<div class="linkToTrailer"><a href="' + locationSearch + '"><span class="glyphicon glyphicon-map-marker"></span>&nbspShow Cinema</a>' + '</div><br>';  
           nowPlayingHTML += '<div class="release">Release Date: ' + releaseDate + '</div><br>';
           // nowPlayingHTML += '<div class="genre">Genre: '+genre+'</div><br>';
           nowPlayingHTML += '<div class="overview">' + overview + '</div><br>'; // Put overview in a separate div to make it easier to style
-          nowPlayingHTML += '<div class="rating">Rating: ' + voteAverage + '/10</div><br>';
+          nowPlayingHTML += '<div class="rating">IMDB Rating: ' + voteAverage + '/10</div><br>';
           // nowPlayingHTML += '<div class="col-sm-3 btn btn-primary">8:30 AM' + '</div>';
           // nowPlayingHTML += '<div class="col-sm-3 btn btn-primary">10:00 AM' + '</div>';
           // nowPlayingHTML += '<div class="col-sm-3 btn btn-primary">12:30 PM' + '</div>';
@@ -299,6 +303,7 @@ $(document).ready(function() {
     })
   }
 });
+
 
 //.append(nowPlayingHTML) adds nowPlayingHTML to the present HTML
 //.html(nowPlayingHTML) ovwrwrites the HTML present with nowPlayingHTML.
