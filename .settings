@@ -20,7 +20,7 @@
 ; enter your terminal preferences here...
 
 [preview]
-index_file = movie_page.html
+index_file = index.html
 ; enter your preview preferences here...
 
 [search]

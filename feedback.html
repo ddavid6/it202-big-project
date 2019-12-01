@@ -42,7 +42,7 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -60,56 +60,35 @@
             <div class="col-md-6">
                 <form class="form-signin">
 
-                    <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
-
-
+                    <h1 class="h3 mb-3 font-weight-normal">Feedback</h1>
                     <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address">
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                    <div class="mdc-form-field">
-                        <div class="mdc-checkbox">
-                            <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1" />
-                            <div class="mdc-checkbox__ripple"></div>
-                        </div>
-                        <label for="checkbox-1">Save Password</label>
-                    </div>
-                    <a class="btn btn-lg btn-primary btn-block" id="login-user" type="submit" href="index.html">Sign in</a>
-                    <br>
+
+
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                    <br/>
+                    <textarea name="text" cols="50" rows="5">
+                    </textarea>
+
+                    <br/><br/>
+                    <input type="file" accept="image/*;capture=camera">
+
+
+                    <br/>
 
                 </form>
             </div>
-            <div class="col-md-6">
-                <form class="form-signin" role="form">
-                    <h1 class="h3 mb-3 font-weight-normal">Create account</h1>
-                    <div class="user-info"></div>
-                    <label for="inputNickname" id="nickname" class="sr-only">Nickname</label>
-                    <input type="text" id="inputNickname" class="form-control" placeholder="Nickname">
-
-                    <label for="email-input" class="sr-only">Email address</label>
-                    <input type="email" id="email-input" class="form-control" placeholder="Email">
-
-                    <label for="password-input" class="sr-only">Password</label>
-                    <input type="password" id="password-input" class="form-control" placeholder="Password" required>
-                    <div class="mdc-form-field">
-                        <div class="mdc-checkbox">
-                            <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1" />
-                            <div class="mdc-checkbox__ripple"></div>
-                        </div>
-                        <label for="checkbox-1">Save Password</label>
-                    </div>
 
 
-                    <button class="btn btn-lg btn-primary btn-block" id="add-newuser" type="submit" onclick="window.location = index.html" ;>Create account</button>
+            <button class="btn btn-lg btn-primary btn-block" id="add-newuser" type="submit" onclick="window.location = index.html" ;>Submit</button>
 
-                    <br>
+            <br>
 
 
-                </form>
 
-            </div>
+
         </div>
     </div>
+
     <!-- End of main page content -->
 
 
