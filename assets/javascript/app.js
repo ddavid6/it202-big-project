@@ -1,6 +1,40 @@
 
 
 $(document).ready(function() {
+ 
+    
+   if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw-test/sw.js', {scope: './sw-test/'})
+  .then((reg) => {
+    // registration worked
+    console.log('Registration succeeded. Scope is ' + reg.scope);
+  }).catch((error) => {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+} 
+    
+    self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open('v2').then((cache) => {
+      return cache.addAll([
+        './index.html/',
+        './feedback.html/',
+        './sign-in.html/',
+        './assets/app.js',
+        
+        
+      
+
+        // include other new resources for the new version...
+      ]);
+    })
+  );
+});
+    
+    
+    
+    
   // The base url for all API calls
   var apiBaseURL = 'https://api.themoviedb.org/3/';
   var apiKey = "d6e856f9ebe196c9adbd300aa4adac59"
@@ -10,7 +44,7 @@ $(document).ready(function() {
 
   const nowPlayingURL = apiBaseURL + 'movie/now_playing?api_key=' + apiKey;
 
-
+  
   //  Get "now playing" data on default.
   //  Change results when a genre is clicked on.
 

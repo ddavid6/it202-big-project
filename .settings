@@ -20,7 +20,7 @@
 ; enter your terminal preferences here...
 
 [preview]
-index_file = index.html
+index_file = sign-in.html
 ; enter your preview preferences here...
 
 [search]
