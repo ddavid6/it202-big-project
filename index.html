@@ -4,7 +4,17 @@
 <head>
 
 	<title> MovieWhiz </title>
-    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="app">
+<meta name="apple-mobile-web-app-title" content="app">
+<meta name="theme-color" content="#233b69">
+<meta name="msapplication-navbutton-color" content="#233b69">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-starturl" content="/index.html">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="manifest" href="./manifest.json">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -33,7 +43,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="index.html" class="nowPlaying">Home</a></li>
-                    <li><a href="feedback.html" class="feedback">Home</a></li>
+                    <li><a href="feedback.html" class="feedback">Feedback</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Genres<span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -130,8 +140,13 @@
 			</div>
 		</div>
 	  </div>
+    
 	  <!-- End of sign in -->
-
+<script>if('serviceWorker' in navigator) {
+	navigator.serviceWorker
+					 .register('/it202-bigproject/assets/javascript/app.js')
+					 .then(function() { console.log("Service Worker Registered"); });
+}</script>
 
 	<!-- JQUERY -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
