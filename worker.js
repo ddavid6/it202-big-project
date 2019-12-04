@@ -1,4 +1,4 @@
-var cache = "v1"; 
+var cache = 'v1'; 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
