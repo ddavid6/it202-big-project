@@ -1,16 +1,15 @@
-var cache = 'v1'; 
+var cache = 'v2'; 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
-        '/it202-bigproject',
-        '/it202-bigproject/index.html/',
-        '/it202-bigproject/feedback.html/',
-        '/it202-bigproject/image.png/',
-        '/it202-bigproject/sign-in.html/',
-        '/it202-bigproject/assets/javascript/app.js',
-         '/it202-bigproject/assets/css/reset.css',
-         '/it202-bigproject/assets/css/style.css',
+        './index.html',
+        './feedback.html',
+        './image.png',
+        './sign-in.html',
+        './assets/javascript/app.js',
+         './assets/css/reset.css',
+         './assets/css/style.css',
       ]);
     })
   );
