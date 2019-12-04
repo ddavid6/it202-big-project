@@ -46,7 +46,7 @@ self.addEventListener('fetch', function(e) {
       
 
    
-    
+/*    
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -75,4 +75,4 @@ window.addEventListener('beforeinstallprompt', (e) => {
     });
 });
 });    
-    
+*/  
