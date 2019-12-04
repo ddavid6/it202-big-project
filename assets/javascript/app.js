@@ -1,21 +1,5 @@
 $(document).ready(function() {  
     
- if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('worker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-    
-
- 
-    
-    
     
   // The base url for all API calls
   var apiBaseURL = 'https://api.themoviedb.org/3/';

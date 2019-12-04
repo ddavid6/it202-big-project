@@ -1,15 +1,16 @@
 {
-    "short_name": "MWZ",
-    "name": "MovieWhiz",
-    "icons": [ 
-        {
-        "src": "./image.png",
-        "type": "image/png",
-        "sizes": "192x192"
+  "name": "Movie Whiz",
+  "short_name": "MW",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "navy",
+  "description": "To find the newest movies and its ratings",
+  "icons": [
+    {
+      "src": "./image.png",
+      "sizes": "570x570",
+      "type": "image/png"
     }
-    ],
-    "start_url": "/it202-bigproject/index.html",
-    "background_color": "#3367D6",
-    "display": "standalone",
-    "theme_color": "#3367D6"
+  ],
+  "related_applications": []
 }
