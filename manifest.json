@@ -3,14 +3,13 @@
     "name": "MovieWhiz",
     "icons": [ 
         {
-        "src": "/image.png",
+        "src": "./image.png",
         "type": "image/png",
-        "sizes": "512x512"
+        "sizes": "192x192"
     }
     ],
     "start_url": "/it202-bigproject/index.html",
     "background_color": "#3367D6",
     "display": "standalone",
-    "scope": "/maps/",
     "theme_color": "#3367D6"
 }
