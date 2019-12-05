@@ -50,7 +50,7 @@ $(document).ready(function() {
 
           var overview = nowPlayingData.results[i].overview;
           
-          var locationSearch = "https://www.google.com/maps/search/theatre+near+current+location/data=!3m1!4b1"    ;
+          var locationSearch = "https://www.google.com/maps/search/movie+theatre+near+current+location/data=!3m1!4b1"    ;
             
           var voteAverage = nowPlayingData.results[i].vote_average;
 
@@ -77,6 +77,8 @@ $(document).ready(function() {
           // nowPlayingHTML += '<div class="genre">Genre: '+genre+'</div><br>';
           nowPlayingHTML += '<div class="overview">' + overview + '</div><br>'; // Put overview in a separate div to make it easier to style
           nowPlayingHTML += '<div class="rating">IMDB Rating: ' + voteAverage + '/10</div><br>';
+          
+        
           // nowPlayingHTML += '<div class="col-sm-3 btn btn-primary">8:30 AM' + '</div>';
           // nowPlayingHTML += '<div class="col-sm-3 btn btn-primary">10:00 AM' + '</div>';
           // nowPlayingHTML += '<div class="col-sm-3 btn btn-primary">12:30 PM' + '</div>';
